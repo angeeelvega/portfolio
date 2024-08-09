@@ -2,30 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes typewriter {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-.intro-text {
-  font-size: 3rem; /* Ajusta el tamaño de la fuente según sea necesario */
-  font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-  line-height: 1; /* Asegura que la altura de la línea sea igual al tamaño del texto */
-  animation: typewriter 2.8s steps(40, end) forwards; /* Cambia la duración a 2s */
-}
-
-@media (max-width: 768px) {
-  .intro-text {
-    font-size: 2rem; /* Ajusta el tamaño de la fuente para dispositivos móviles */
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1.5s forwards;
-}
