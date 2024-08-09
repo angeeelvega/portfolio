@@ -2,3 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCursor {
+  0% {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  49% {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  50% {
+    border-right-color: transparent;
+  }
+  100% {
+    border-right-color: transparent;
+  }
+}
+
+.intro-text {
+  font-size: 3rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1;
+  animation: typewriter 3.5s steps(40, end) forwards;
+}
+
+@media (max-width: 768px) {
+  .intro-text {
+    font-size: 2rem;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1.5s forwards;
+  }
+}
