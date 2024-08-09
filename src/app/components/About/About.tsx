@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import Section from "./Section";
+import Section from "../Section/Section";
 
 export default function About() {
   const [showIntro, setShowIntro] = useState(true);
@@ -9,7 +9,7 @@ export default function About() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 5000); 
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);

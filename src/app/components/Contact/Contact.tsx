@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import Section from "./Section";
+import Section from "../Section/Section";
 
 export default function Contact() {
   return (
