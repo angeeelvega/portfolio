@@ -8,6 +8,7 @@
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
+    "typeRoots": ["./node_modules/@types", "./types"],
 
     /* Strictness */
     "strict": true,
@@ -26,7 +27,8 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./src/*"]
+      "@components/*": ["./src/app/components/*"],
+      "@pages/*": ["./src/app/pages/*"]
     }
   },
   "include": [
