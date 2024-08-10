@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Section from "../Section/Section";
+import "../About/Styles.scss";
 
 export default function About() {
   const [showIntro, setShowIntro] = useState(true);
@@ -19,7 +20,7 @@ export default function About() {
       {showIntro ? (
         <div className="flex h-full items-center justify-center">
           <div className="intro-text max-w-5xl text-center">
-            Hi, I'm Ángel Vega
+            Hi, I&apos;m Ángel Vega
           </div>
         </div>
       ) : (

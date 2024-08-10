@@ -13,7 +13,7 @@
   white-space: nowrap;
   overflow: hidden;
   line-height: 1; /* Asegura que la altura de la línea sea igual al tamaño del texto */
-  animation: typewriter 2.2s steps(40, end) forwards; /* Cambia la duración a 2s */
+  animation: typewriter 2s steps(40, end) forwards; /* Cambia la duración a 2s */
 }
 
 @media (max-width: 768px) {

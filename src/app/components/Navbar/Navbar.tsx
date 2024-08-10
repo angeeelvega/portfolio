@@ -51,15 +51,15 @@ export default function Navbar() {
           </div>
           <div className="hidden md:flex md:space-x-4">
             <Link href="#about">About</Link>
+            <Link href="#skills">Skills</Link>
             <Link href="#projects">Projects</Link>
-            <Link href="#contact">Contact</Link>
           </div>
         </div>
         {isOpen && (
           <div className="mt-4 flex items-center flex-col space-y-4 md:hidden">
             <Link href="#about">About</Link>
+            <Link href="#skills">Skills</Link>
             <Link href="#projects">Projects</Link>
-            <Link href="#contact">Contact</Link>
           </div>
         )}
       </div>
