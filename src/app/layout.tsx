@@ -1,8 +1,8 @@
 import "../app/styles/globals.scss";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
-import Navbar from "./components/Navbar";
-import Footer from "@components/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "@components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "My Portfolio",

@@ -1,7 +1,7 @@
 import React from "react";
-import About from "@components/About";
-import Projects from "@components/Projects";
-import Skills from "@components/Skills";
+import About from "@components/About/About";
+import Projects from "@components/Projects/Projects";
+import Skills from "@components/Skills/Skills";
 
 export default function HomePage() {
   return (
