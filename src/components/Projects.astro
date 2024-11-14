@@ -1,0 +1,43 @@
+---
+import Card from './Card.astro';
+import Section from './Section.astro';
+
+const cardsData = [
+  {
+    imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    title: "Opti Assistant Frontend",
+    description: "A chat assistant application built with React, TypeScript, and Material-UI. Features real-time chat with AI and integrated text-to-speech.",
+    badges: ["React", "TypeScript", "Material-UI"],
+    link: "https://github.com/angeeelvega/opti-assistant-frontend"
+  },
+  {
+    imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    title: "Lorem Ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis tortor eu fringilla imperdiet.",
+    badges: ["Fashion", "Products"],
+  },
+  {
+    imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+    title: "Lorem Ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis tortor eu fringilla imperdiet.",
+    badges: ["Fashion", "Products"],
+  },
+];
+---
+
+<Section id="projects" >
+  <div class="max-w-5xl mx-auto">
+    <h2 class="mb-8 text-3xl font-bold">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {cardsData.map((card) => (
+        <Card
+          imgSrc={card.imgSrc}
+          title={card.title}
+          description={card.description}
+          badges={card.badges}
+          link={card.link}
+        />
+      ))}
+    </div>
+  </div>
+</Section> 
