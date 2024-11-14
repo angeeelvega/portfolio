@@ -31,11 +31,6 @@
       "@pages/*": ["./src/pages/*"]
     }
   },
-  "include": [
-    ".eslintrc.cjs",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.astro"
-  ],
+  "include": [".eslintrc.cjs", "**/*.ts", "**/*.tsx", "**/*.astro"],
   "exclude": ["node_modules"]
 }

@@ -1,0 +1,37 @@
+---
+import Section from './Section.astro';
+
+const experienceData = [
+  {
+    jobTitle: 'Software Developer',
+    company: 'Seguros Bolívar S.A.',
+    duration: 'October 2022 - Present',
+    description: `
+      Developed key features for a self-management system for policies, improving efficiency and user experience. Built the frontend with Angular and used Spring Boot and PL/SQL for the backend. Conducted unit testing to enhance application reliability. Integrated RESTful APIs for better user interactions. Worked with teams in an agile environment to meet business goals.
+    `,
+  },
+  {
+    jobTitle: ' UI - UX Trainee',
+    company: 'Acrozephy',
+    duration: '2022-2023',
+    description: `Designed responsive layouts in Figma, enhancing the project adaptability across devices.
+                  Continuously developed knowledge in design systems and user experience principles to support
+                 efficient and user-centered development.`,
+  },
+];
+---
+
+<Section id="experience" title="Experience">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 gap-8">
+    {
+      experienceData.map((job) => (
+        <div class="border rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h3 class="font-bold text-xl">{job.jobTitle}</h3>
+          <p class="text-sm text-gray-600">{job.company}</p>
+          <p class="text-sm text-gray-500">{job.duration}</p>
+          <p class="mt-2"> {job.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</Section>

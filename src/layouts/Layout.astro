@@ -24,7 +24,9 @@ const { title, description = 'Mi Portfolio' } = Astro.props;
   </head>
   <body class="bg-primaryBase-light dark:bg-primaryBase-dark text-black dark:text-white">
     <Navbar />
-    <slot />
+    <main class="max-w-4xl w-full mx-auto px-4">
+      <slot />
+    </main>
     <Footer />
   </body>
 </html> 
