@@ -2,7 +2,8 @@ import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
-  content: ["./src/**/*.tsx"],
+  darkMode: 'class',
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       keyframes: {
@@ -15,10 +16,13 @@ export default {
         fadeInUp: "fadeInUp 0.5s ease-out forwards",
       },
       colors: {
-        primaryBase: "#000212",
+        primaryBase: {
+          light: '#ffffff',
+          dark: '#000000',
+        }
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        sans: [...fontFamily.sans],
       },
     },
   },

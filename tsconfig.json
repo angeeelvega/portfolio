@@ -8,7 +8,7 @@
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
-    "typeRoots": ["./node_modules/@types", "./types"],
+    "typeRoots": ["./node_modules/@types", "./types", "./node_modules/nlcst"],
 
     /* Strictness */
     "strict": true,
@@ -19,26 +19,23 @@
     "lib": ["dom", "dom.iterable", "ES2022"],
     "noEmit": true,
     "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "jsx": "preserve",
-    "plugins": [{ "name": "next" }],
-    "incremental": true,
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "allowImportingTsExtensions": true,
 
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./src/app/components/*"],
-      "@pages/*": ["./src/app/pages/*"]
+      "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@pages/*": ["./src/pages/*"]
     }
   },
   "include": [
     ".eslintrc.cjs",
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.cjs",
-    "**/*.js",
-    ".next/types/**/*.ts"
+    "**/*.astro"
   ],
   "exclude": ["node_modules"]
 }
