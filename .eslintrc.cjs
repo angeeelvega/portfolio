@@ -8,7 +8,8 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: true,
-    tsconfigRootDir: __dirname,
+    tsconfigRootDir: __dirname || process.cwd(),
+    types: ['node'],
   },
   plugins: ['@typescript-eslint'],
   overrides: [
@@ -20,7 +21,6 @@ module.exports = {
         extraFileExtensions: ['.astro'],
       },
       rules: {
-        // Reglas específicas para archivos .astro
       },
     },
   ],
