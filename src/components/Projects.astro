@@ -3,13 +3,7 @@ import Card from './Card.astro';
 import Section from './Section.astro';
 
 const cardsData = [
-  {
-    imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Opti Assistant Frontend",
-    description: "A chat assistant application built with React, TypeScript, and Material-UI. Features real-time chat with AI and integrated text-to-speech.",
-    badges: ["React", "TypeScript", "Material-UI"],
-    link: "https://github.com/angeeelvega/opti-assistant-frontend"
-  },
+
   {
     imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
     title: "Lorem Ipsum",
@@ -35,7 +29,6 @@ const cardsData = [
           title={card.title}
           description={card.description}
           badges={card.badges}
-          link={card.link}
         />
       ))}
     </div>
