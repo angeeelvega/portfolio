@@ -3,19 +3,34 @@ import Card from './Card.astro';
 import Section from './Section.astro';
 
 const cardsData = [
-
   {
-    imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Lorem Ipsum",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis tortor eu fringilla imperdiet.",
-    badges: ["Fashion", "Products"],
+    imgSrc: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    title: "Zenith",
+    description: "A modern platform where developers can find projects that align with their skills and interests, and where project creators can form talented teams.",
+    badges: ["Tech", "Social Media"],
+    link: "https://github.com/angeeelvega/zenith-frontend", // Reemplaza con tu URL real del repo
   },
   {
-    imgSrc: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Lorem Ipsum",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis tortor eu fringilla imperdiet.",
-    badges: ["Fashion", "Products"],
+    imgSrc: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    title: "Poke Api",
+    description: "This project is a web application that allows users to search and view information about different Pokémon using the PokeAPI.",
+    badges: ["Tech", "PokeApi"],
+    link: "https://github.com/angeeelvega/poke-api-frontend", // Reemplaza con tu URL real del repo
   },
+  {
+    imgSrc: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    title: "Booking App",
+    description: "A hotel booking application that allows users to search and book hotels in a simple and efficient way.",
+    badges: ["Tech", "Booking"],
+    link: "https://github.com/angeeelvega/booking-frontend",
+  },
+  {
+    imgSrc: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    title: "CV Builder",
+    description: "An application that allows users to create and download their CV in a simple and efficient way.",
+    badges: ["Tech", "CV"],
+    link: "https://github.com/angeeelvega/cv-builder",
+  }
 ];
 ---
 
@@ -29,6 +44,7 @@ const cardsData = [
           title={card.title}
           description={card.description}
           badges={card.badges}
+          link={card.link}
         />
       ))}
     </div>

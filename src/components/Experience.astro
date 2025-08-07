@@ -3,20 +3,18 @@ import Section from './Section.astro';
 
 const experienceData = [
   {
-    jobTitle: 'Software Developer',
     company: 'Seguros Bolívar S.A.',
     duration: 'October 2022 - Present',
-    description: `
-      Developed key features for a self-management system for policies, improving efficiency and user experience. Built the frontend with Angular and used Spring Boot and PL/SQL for the backend. Conducted unit testing to enhance application reliability. Integrated RESTful APIs for better user interactions. Worked with teams in an agile environment to meet business goals.
-    `,
-  },
-  {
-    jobTitle: ' UI - UX Trainee',
-    company: 'Acrozephy',
-    duration: '2022-2023',
-    description: `Designed responsive layouts in Figma, enhancing the project adaptability across devices.
-                  Continuously developed knowledge in design systems and user experience principles to support
-                 efficient and user-centered development.`,
+    roles: [
+      
+      {
+        jobTitle: 'Software Developer',
+        period: 'October 2022 - December 2023',
+        description: `
+          Developed key features for a self-management system for policies, improving efficiency and user experience. Built the frontend with Angular and used Spring Boot and PL/SQL for the backend. Conducted unit testing to enhance application reliability. Integrated RESTful APIs for better user interactions. Collaborated with cross-functional teams within an agile environment to align technical development with business goals, delivering consistent value and a culture of technical excellence and teamwork.
+        `,
+      },
+    ],
   },
 ];
 ---
@@ -25,11 +23,20 @@ const experienceData = [
   <div class="max-w-5xl mx-auto grid grid-cols-1 gap-8">
     {
       experienceData.map((job) => (
-        <div class="border rounded-lg p-6  overflow-hidden transition-colors dark:border-white/10 dark:hover:border-white/30 border-black/10 hover:border-black/30">
-          <h3 class="font-bold text-xl">{job.jobTitle}</h3>
-          <p class="text-sm text-gray-600">{job.company}</p>
-          <p class="text-sm text-gray-500">{job.duration}</p>
-          <p class="mt-2"> {job.description}</p>
+        <div class="border rounded-lg p-6 overflow-hidden transition-colors dark:border-white/10 dark:hover:border-white/30 border-black/10 hover:border-black/30">
+          <div class="mb-4">
+            <h3 class="font-bold text-xl">{job.company}</h3>
+            <p class="text-sm text-gray-500">{job.duration}</p>
+          </div>
+          <div class="space-y-4">
+            {job.roles.map((role) => (
+              <div class="border-l-4 border-blue-500 pl-4">
+                <h4 class="font-semibold text-lg">{role.jobTitle}</h4>
+                <p class="text-sm text-gray-600 mb-2">{role.period}</p>
+                <p class="text-sm">{role.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       ))
     }
